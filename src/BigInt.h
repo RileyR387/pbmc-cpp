@@ -1,4 +1,7 @@
-// Riley Raschke
+// Author: Riley Raschke
+// © 2016 rrappsdev.com
+// DWTFYW Licensce - Just mention me
+//
 
 #ifndef BigInt_h
 #define BigInt_h

@@ -1,5 +1,7 @@
-// Riley Raschke
-// Class::BigInt Implementation
+// Author: Riley Raschke
+// © 2016 rrappsdev.com
+// DWTFYW Licensce - Just mention me
+//
 
 #ifndef BigInt_h
 #include "BigInt.h"
