@@ -2,9 +2,23 @@
 
 Requires libboost-dev >=1.48.0 for includes and libboost >=1.48.0 libs for shared objects
 
-ubuntu 12.04: apt-get install libboost1.48-all-dev
+ubuntu 12.04: 
 
-Newer versions of ubuntu <b>should</b> get by with libboost-all-dev
+```sh
+apt-get install libboost1.48-all-dev
+```
+
+ubuntu >= 16.04:
+
+```sh
+apt-get install libboost-all-dev
+```
+
+RH/Centos:
+
+```sh
+yum install boost boost-devel
+```
 
 <h3>Build and run:</h3>
 
