@@ -4,7 +4,7 @@ Requires libboost-dev >=1.48.0 for includes and libboost >=1.48.0 libs for share
 
 ubuntu 12.04: apt-get install libboost1.48-all-dev
 
-newer versions of ubuntu <b>may</b> get by with libboost-all-dev
+Newer versions of ubuntu <b>should</b> get by with libboost-all-dev
 
 <h3>Build and run:</h3>
 
@@ -15,6 +15,7 @@ make && ./bin/pbmc --help
 ```
 
 <h4>Program Options</h4>
+
 ```sh
 Allowed options:
   -h [ --help ]         produce this message
@@ -30,3 +31,4 @@ Allowed options:
                         thread, each thread is idealy offset by 3.14 seconds; 
                         potentially less random even more
 ```
+
