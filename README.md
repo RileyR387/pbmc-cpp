@@ -1,14 +1,20 @@
-<h3>Dependencies</h3>
+# Powerball Monte Carlo in C++ with boost
+c++ environment tester first, CPU stresser second, and a few million reasons not to play the powerball.
+
+Recently built with boost-1.72.0 on OSX and boost-1.65.1 on ubuntu-18.04
+
+**WARNING**: Read the license, there's no warrenty and this thing will use some juice.
+
+### Dependencies
 
 Requires libboost-dev >=1.48.0 for includes and libboost >=1.48.0 libs for shared objects
 
-ubuntu 12.04: 
-
+OSX:
 ```sh
-apt-get install libboost1.48-all-dev
+brew install boost
 ```
 
-ubuntu >= 16.04:
+ubuntu >= 18.04:
 
 ```sh
 apt-get install libboost-all-dev
@@ -20,7 +26,7 @@ RH/Centos:
 yum install boost boost-devel
 ```
 
-<h3>Build and run:</h3>
+## Build and Run
 
 ```sh
 git clone https://github.com/RileyR387/pbmc-cpp.git
@@ -28,7 +34,7 @@ cd pbmc-cpp
 make && ./bin/pbmc --help
 ```
 
-<h4>Program Options</h4>
+### Program Options
 
 ```sh
 Allowed options:

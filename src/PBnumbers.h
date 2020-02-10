@@ -1,6 +1,5 @@
 // Author: Riley Raschke
 // © 2016 rrappsdev.com
-// DWTFYW Licensce - Just mention me
 //
 
 #ifndef PBnumbers_h

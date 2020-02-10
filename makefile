@@ -1,6 +1,5 @@
 # Author: Riley Raschke
-# © 2016 rrappsdev.com
-# DWTFYW Licensce - Just mention me
+# © 2020 rrappsdev.com
 
 .DEFAULT_GOAL := build
 
@@ -12,6 +11,14 @@ INC =include
 DEST=bin
 OBJ_DIR=obj
 mkd=@mkdir
+UNAME_S := $(shell uname -s)
+
+THREAD_LIB :=
+ifeq ($(UNAME_S),Darwin)
+	THREAD_LIB = boost_thread-mt
+else
+	THREAD_LIB = boost_thread
+endif
 
 build: clean-all BigInt.o PBnumbers.o PBgenerator.o exec
 
@@ -20,7 +27,7 @@ exec:
 	$(CC) $(CFLAGS) -I $(SRC_INCLUDE) \
 		-o $(DEST)/$(TARGET) $(SRC_INCLUDE)/main.cpp \
 		$(OBJ_DIR)/PBnumbers.o $(OBJ_DIR)/PBgenerator.o $(OBJ_DIR)/BigInt.o \
-		-l boost_program_options -l pthread -l boost_system -l boost_thread -l boost_timer
+		-l boost_program_options -l pthread -l boost_system -l $(THREAD_LIB) -l boost_timer
 
 PBnumbers.o:
 	$(CC) $(CFLAGS) -I $(SRC_INCLUDE) -o $(OBJ_DIR)/PBnumbers.o \
