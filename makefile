@@ -12,9 +12,14 @@ DEST=bin
 OBJ_DIR=obj
 mkd=@mkdir
 UNAME_S := $(shell uname -s)
+IS_ALPINE := $(shell test -f /etc/alpine-release && echo yes)
+
+#$(info $$IS_ALPINE is [${IS_ALPINE}])
 
 THREAD_LIB :=
 ifeq ($(UNAME_S),Darwin)
+	THREAD_LIB = boost_thread-mt
+else ifeq ($(IS_ALPINE),yes)
 	THREAD_LIB = boost_thread-mt
 else
 	THREAD_LIB = boost_thread

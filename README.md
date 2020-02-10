@@ -10,6 +10,7 @@ Recently built with boost-1.72.0 on OSX and boost-1.65.1 on ubuntu-18.04
 Requires libboost-dev >=1.48.0 for includes and libboost >=1.48.0 libs for shared objects
 
 OSX:
+
 ```sh
 brew install boost
 ```
@@ -32,6 +33,15 @@ yum install boost boost-devel
 git clone https://github.com/RileyR387/pbmc-cpp.git
 cd pbmc-cpp
 make && ./bin/pbmc --help
+```
+
+### Docker (Alpine)
+```sh
+git clone https://github.com/RileyR387/pbmc-cpp.git
+cd pbmc-cpp
+docker build . -t pbmc:latest
+docker run -it pbmc:latest sh
+./bin/pbmc --help
 ```
 
 ### Program Options

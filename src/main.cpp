@@ -84,7 +84,7 @@ int main( int argc, char** argv ) {
       po::variables_map vm;
       po::store(po::parse_command_line(argc, argv, desc), vm);
       po::notify(vm);
-      if( vm.count("help")    ){ cout << desc << "\n"; return 1;        }
+      if( vm.count("help")    ){ cout << desc << "\n"; return 0;        }
       if( vm.count("lines")   ){ lineCount   = vm["lines"].as<int>();   }
       if( vm.count("nCount")  ){ nCount      = vm["nCount"].as<int>();  }
       if( vm.count("pCount")  ){ pCount      = vm["pCount"].as<int>();  }
