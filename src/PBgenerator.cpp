@@ -39,6 +39,7 @@ PBgenerator& PBgenerator::operator=(const PBgenerator & other ){
    pCount = other.pCount;
    nDist = dist_type(1, nMax);
    pDist = dist_type(1, pMax);
+   return *this;
 }
 
 PBgenerator::PBgenerator( base_generator_type *gen ){
