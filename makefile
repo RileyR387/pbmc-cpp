@@ -40,8 +40,7 @@ PBnumbers.o:
 
 PBgenerator.o:
 	$(CC) $(CFLAGS) -I $(SRC_INCLUDE) -o $(OBJ_DIR)/PBgenerator.o \
-		-c $(SRC_INCLUDE)/PBgenerator.cpp \
-		-l boost_thread -l boost_system
+		-c $(SRC_INCLUDE)/PBgenerator.cpp
 
 BigInt.o:
 	$(mkd) -p $(OBJ_DIR)
